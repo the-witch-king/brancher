@@ -75,7 +75,7 @@ program
           process.exit(1)
         }
 
-        console.log(stdout)
+        console.log(`Success - you are now on branch '${branchName}'`)
       })
     })
   })
