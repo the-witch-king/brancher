@@ -6,6 +6,14 @@ Run this sucker and all your work is done for you.
 
 ## Installation
 
+1. Clone:
+
+```
+git clone git@github.com:the-witch-king/brancher.git
+```
+
+2. Theeeeen...
+
 Quick n dirty:
 
 ```
