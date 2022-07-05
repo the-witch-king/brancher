@@ -15,7 +15,7 @@ const tooManyOrNotEnoughIssues = () => {
   console.log(
     'Make sure the identifier you provide matches a ticket identifier'
   )
-  console.log('ie: FOO-49')
+  console.log('ie: FOO-123')
   process.exit()
 }
 
