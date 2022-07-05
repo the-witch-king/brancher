@@ -2,7 +2,9 @@ import { LinearClient } from '@linear/sdk'
 
 const tooManyOrNotEnoughIssues = () => {
   console.log('Unable to find the specific issue.')
-  console.log('Make sure the identifier you provide matches a ticket identifier')
+  console.log(
+    'Make sure the identifier you provide matches a ticket identifier'
+  )
   console.log('ie: FOO-49')
   process.exit()
 }
@@ -19,7 +21,7 @@ const branch = async (apiKey: string, ticket: string): Promise<string> => {
 
   if (issues.nodes.length !== 1) tooManyOrNotEnoughIssues()
 
-  const { branchName } = issues.nodes[0];
+  const { branchName } = issues.nodes[0]
 
   return formatBranchName(branchName)
 }

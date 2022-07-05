@@ -64,7 +64,17 @@ program
     if (!apiKey) notConfiguredWarning()
 
     branch(apiKey, ticket).then((branchName) => {
-      exec('git branch', (err, stdout, stderr) => {
+      exec(`git checkout -b ${branchName}`, (err, stdout, stderr) => {
+        if (err) {
+          console.error(err)
+          process.exit(1)
+        }
+
+        if (stderr) {
+          console.error(err)
+          process.exit(1)
+        }
+
         console.log(stdout)
       })
     })
