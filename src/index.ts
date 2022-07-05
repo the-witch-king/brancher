@@ -60,21 +60,15 @@ program
     if (!existsSync(CONFIG_FILE_PATH)) notConfiguredWarning()
 
     const config = dotenv.parse(readFileSync(CONFIG_FILE_PATH))
-
     const apiKey = getApiKey(config)
 
     if (!apiKey) notConfiguredWarning()
 
     branch(apiKey, ticket).then((branchName) => {
-      exec(`git checkout -b ${branchName}`, (err, stdout, stderr) => {
+      exec(`git checkout -b ${branchName}`, (err, _stdout, _stderr) => {
         if (err) {
-          console.error(err)
-          process.exit(1)
-        }
-
-        if (stderr) {
-          console.error(err)
-          process.exit(1)
+          console.log(err)
+          process.exit()
         }
 
         console.log(`Success - you are now on branch '${branchName}'`)

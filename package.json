@@ -2,11 +2,14 @@
   "name": "brancher",
   "version": "0.0.1",
   "description": "Git branch helper for teams using LInear",
-  "main": "./lib/index.js",
+  "main": "./build/index.js",
   "bin": {
-    "brancher": "./lib/index.js"
+    "brancher": "./build/index.js"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "tsc -p .",
+    "package": "pack"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/the-witch-king/brancher.git"
@@ -16,10 +19,11 @@
   "homepage": "https://github.com/the-witch-king/brancher#readme",
   "dependencies": {
     "@linear/sdk": "^1.22.0",
+    "brancher": "file:brancher-0.0.1.tgz",
     "commander": "^9.3.0",
     "dotenv": "^16.0.1",
-    "typescript": "^4.7.4",
-    "readline": "^1.3.0"
+    "readline": "^1.3.0",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
     "ts-node": "^10.8.2",
