@@ -1,0 +1,19 @@
+{
+  "name": "brancher",
+  "version": "0.0.1",
+  "description": "Git branch helper for teams using LInear",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-witch-king/brancher.git"
+  },
+  "author": "michael churilov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-witch-king/brancher/issues"
+  },
+  "homepage": "https://github.com/the-witch-king/brancher#readme"
+}
