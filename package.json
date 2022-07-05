@@ -2,7 +2,10 @@
   "name": "brancher",
   "version": "0.0.1",
   "description": "Git branch helper for teams using LInear",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "bin": {
+    "brancher": "./lib/index.js"
+  },
   "scripts": {},
   "repository": {
     "type": "git",

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { readFileSync, existsSync, writeFileSync } from 'fs'
 import readline from 'readline'
 import { homedir } from 'os'
